@@ -46,13 +46,13 @@
 }
 
 html {
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
 body {
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
     background-color: #000;
     color: var(--color-dark-100);
@@ -89,10 +89,10 @@ body {
 
 @layer components {
     header {
-        @apply w-screen fixed top-0 left-0 z-50 flex-center bg-black min-h-[7vh];
+        @apply w-full fixed top-0 left-0 z-50 flex-center bg-black min-h-[7vh];
 
         nav {
-            @apply container mx-auto flex-between px-5 2xl:px-0;
+            @apply mx-auto flex-between px-5 w-full max-w-5xl;
 
             img {
                 @apply cursor-pointer hover:-translate-y-0.5 transition-all duration-300 ease-in-out;
@@ -113,7 +113,7 @@ body {
     }
 
     #hero {
-        @apply h-fit lg:h-[80vh] col-center mt-40 lg:mt-20 2xl:mt-[7vh];
+        @apply h-fit lg:h-[90vh] col-center mt-40 lg:mt-20 2xl:mt-[7vh];
 
         div {
             @apply relative z-10 col-center lg:translate-y-16;
@@ -128,7 +128,8 @@ body {
         }
 
         video {
-            @apply mx-auto lg:translate-y-5 2xl:translate-y-0;
+            @apply mx-auto lg:translate-y-5 2xl:translate-y-0 block border-0 outline-none;
+            clip-path: inset(0 0 2px 0);
         }
 
         button {
