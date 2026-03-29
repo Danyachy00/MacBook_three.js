@@ -4,7 +4,8 @@ import clsx from "clsx";
 import {Canvas} from "@react-three/fiber";
 import {Box, OrbitControls} from "@react-three/drei";
 import MacBookModel14 from "./models/Macbook-14.jsx";
-import StudioLight from "./StudioLight.jsx";
+import StudioLight from "./three/StudioLight.jsx";
+import ModelSwitcher from "./three/ModelSwitcher.jsx";
 
 const ProductViewer = () => {
     const {color, scale, setColor, setScale} = useMacbookStore();
